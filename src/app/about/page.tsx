@@ -60,14 +60,14 @@ export default function AboutPage() {
             </a>
           </li>
           <li>
-            Twitter:{" "}
+            LinkedIn:{" "}
             <a
-              href="https://www.facebook.com/jan.lancelot.mailig.2024"
+              href="https://www.linkedin.com/in/jan-lancelot-mailig-b43949392"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
             >
-              @JanLancelot
+              Lancelot
             </a>
           </li>
         </ul>
