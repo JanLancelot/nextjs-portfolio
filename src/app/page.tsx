@@ -1,8 +1,8 @@
 export default function Home() {
   const contacts = [
-    { name: "Email", href: "mailto:janlancelotm@gmail.com", label: "janlancelotm@gmail.com" },
-    { name: "GitHub", href: "https://github.com/JanLancelot", label: "@JanLancelot", target: "_blank" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/jan-lancelot-mailig-b43949392", label: "Lancelot", target: "_blank" },
+    { name: "Email", href: "mailto:janlancelotm@gmail.com" },
+    { name: "GitHub", href: "https://github.com/JanLancelot", target: "_blank" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/jan-lancelot-mailig-b43949392", target: "_blank" },
   ];
 
   return (
@@ -20,21 +20,16 @@ export default function Home() {
         <h2 className="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-mono font-medium">
           Get in touch
         </h2>
-        <div className="flex flex-col gap-3 sm:flex-row sm:gap-6 text-sm">
+        <div className="flex gap-5 text-sm">
           {contacts.map((contact) => (
             <a
               key={contact.name}
               href={contact.href}
               target={contact.target}
               rel={contact.target ? "noopener noreferrer" : undefined}
-              className="group flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors duration-200"
+              className="minimal-link font-medium text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white transition-colors duration-200"
             >
-              <span className="font-medium text-zinc-800 dark:text-zinc-200 group-hover:text-black dark:group-hover:text-white transition-colors duration-200">
-                {contact.name}:
-              </span>
-              <span className="minimal-link">
-                {contact.label}
-              </span>
+              {contact.name}
             </a>
           ))}
         </div>
