@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col gap-10 animate-fade-in">
-      <header className="flex flex-col gap-2">
+    <div className="flex flex-col gap-10">
+      <header className="flex flex-col gap-2 animate-fade-in">
         <h1 className="text-2xl font-bold tracking-tight text-black dark:text-white">
           About
         </h1>
@@ -17,7 +17,7 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <article className="flex flex-col gap-6 text-[15px] leading-7 text-zinc-600 dark:text-zinc-400">
+      <article className="flex flex-col gap-6 text-[15px] leading-7 text-zinc-600 dark:text-zinc-400 animate-fade-down animation-delay-200">
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. <span className="font-semibold text-black dark:text-white">Consequatur</span>, dolore obcaecati iusto, illum temporibus fugiat magni cupiditate ducimus eos dolores iure nam fuga incidunt placeat, praesentium porro labore voluptatibus consectetur.
         </p>

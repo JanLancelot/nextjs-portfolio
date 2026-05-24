@@ -12,7 +12,7 @@ export default function Newsletter() {
     if (!email) return;
 
     setStatus("loading");
-    
+
     // TODO: Replace with actual API call
     setTimeout(() => {
       if (!email.includes("@")) {
