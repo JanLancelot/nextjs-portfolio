@@ -27,50 +27,6 @@ export default function AboutPage() {
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reiciendis libero doloremque deserunt, et, quos animi aliquid repudiandae beatae deleniti suscipit corporis rerum, adipisci iusto alias ducimus? Ullam, non <span className="font-semibold text-black dark:text-white">eaque</span>. 
         </p>
-
-        <div className="border-t border-zinc-200 dark:border-zinc-800 my-4" />
-
-        <h2 className="text-base font-semibold text-black dark:text-white mt-2">
-          Contact & Coordinates
-        </h2>
-
-        <p>
-          I am always open to chatting about potential collaborations, minimalistic design patterns, or front-end optimization techniques. Feel free to reach out via:
-        </p>
-
-        <ul className="flex flex-col gap-3 font-medium text-zinc-800 dark:text-zinc-200 mt-2 pl-4 list-disc marker:text-zinc-300 dark:marker:text-zinc-700">
-          <li>
-            Email:{" "}
-            <a
-              href="mailto:janlancelotm@gmail.com"
-              className="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-            >
-              janlancelotm@gmail.com
-            </a>
-          </li>
-          <li>
-            GitHub:{" "}
-            <a
-              href="https://github.com/JanLancelot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-            >
-              @JanLancelot
-            </a>
-          </li>
-          <li>
-            LinkedIn:{" "}
-            <a
-              href="https://www.linkedin.com/in/jan-lancelot-mailig-b43949392"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-            >
-              Lancelot
-            </a>
-          </li>
-        </ul>
       </article>
     </div>
   );
