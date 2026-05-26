@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import LifeTimeline from "../../components/life-timeline";
 
 export const metadata: Metadata = {
   title: "About — Lancelot Mailig",
@@ -24,10 +25,17 @@ export default function AboutPage() {
         <p>
           Lorem <span className="font-semibold text-black dark:text-white">ipsum</span> dolor sit amet consectetur adipisicing elit. Ab, ipsum ducimus asperiores libero modi cum iste. Sequi perspiciatis ducimus vero ratione nobis nisi tempora impedit nam voluptate minima, quas unde.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reiciendis libero doloremque deserunt, et, quos animi aliquid repudiandae beatae deleniti suscipit corporis rerum, adipisci iusto alias ducimus? Ullam, non <span className="font-semibold text-black dark:text-white">eaque</span>. 
-        </p>
       </article>
+
+      <hr className="border-zinc-200/50 dark:border-zinc-800/50 my-2" />
+
+      <section className="flex flex-col gap-6 animate-fade-down animation-delay-300">
+        <h2 className="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-mono font-medium">
+          Life Timeline
+        </h2>
+        <LifeTimeline />
+      </section>
     </div>
   );
 }
+
