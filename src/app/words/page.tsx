@@ -17,8 +17,8 @@ export interface Post {
 export const posts: Post[] = [
   {
     title: "Agentic Coding",
-    excerpt: "Reflections on how AI changed the way I code.",
-    date: "May 24, 2026",
+    excerpt: "Reflections on how AI agents changed the way we write and design software.",
+    date: "May 25, 2026",
     slug: "agentic-coding",
     readTime: "4 min read",
   },

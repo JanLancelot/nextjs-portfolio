@@ -18,12 +18,12 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <article className="flex flex-col gap-6 text-[15px] leading-7 text-zinc-600 dark:text-zinc-400 animate-fade-down animation-delay-200">
+      <article className="flex flex-col gap-6 text-[15px] leading-7 text-zinc-650 dark:text-zinc-400 animate-fade-down animation-delay-200 font-sans">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. <span className="font-semibold text-black dark:text-white">Consequatur</span>, dolore obcaecati iusto, illum temporibus fugiat magni cupiditate ducimus eos dolores iure nam fuga incidunt placeat, praesentium porro labore voluptatibus consectetur.
+          I am a developer and designer focused on building <span className="font-semibold text-black dark:text-white">tactile, highly interactive digital experiences</span>. Currently, I am a Computer Science student at DYCI and working as a full-stack developer intern at <span className="font-semibold text-black dark:text-white">Rakso</span>, where I build data-rich web systems and coordinate software projects.
         </p>
         <p>
-          Lorem <span className="font-semibold text-black dark:text-white">ipsum</span> dolor sit amet consectetur adipisicing elit. Ab, ipsum ducimus asperiores libero modi cum iste. Sequi perspiciatis ducimus vero ratione nobis nisi tempora impedit nam voluptate minima, quas unde.
+          My work sits at the intersection of logical structure and creative composition. I enjoy experimenting with <span className="font-semibold text-black dark:text-white">creative code, WebGL/3D, and procedural synthesis</span> to design interfaces that feel responsive, alive, and tactile. From representing the Philippines at the World Robot Olympiad in Germany to directing the 3D Japanese learning game *Nihon-Go*, I strive for simple, high-performing craft.
         </p>
       </article>
 

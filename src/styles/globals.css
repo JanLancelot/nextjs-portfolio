@@ -3,11 +3,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #fbfbfb;
-  --foreground: #111111;
-  --accent: #2563eb;
+  --background: #fafafa;
+  --foreground: #141416;
+  --accent: #3b82f6;
   --border: #e4e4e7;
-  --muted: #52525b;
+  --muted: #71717a;
+  --accent-rgb: 59, 130, 246;
+}
+
+.dark {
+  --background: #08080a;
+  --foreground: #f4f4f7;
+  --border: #1f1f23;
+  --muted: #8e8e99;
+  --accent: #60a5fa;
+  --accent-rgb: 96, 165, 250;
 }
 
 @theme inline {
@@ -20,24 +30,64 @@
   --font-mono: var(--font-geist-mono), monospace;
 }
 
-.dark {
-  --background: #0a0a0a;
-  --foreground: #f4f4f5;
-  --border: #27272a;
-  --muted: #a1a1aa;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.15);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.3);
+}
+
+/* Grid & Blueprint Aesthetics */
+.blueprint-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(var(--accent-rgb), 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--accent-rgb), 0.03) 1px, transparent 1px);
+}
+
+.blueprint-grid-subtle {
+  background-size: 8px 8px;
+  background-image: 
+    linear-gradient(to right, rgba(var(--accent-rgb), 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--accent-rgb), 0.015) 1px, transparent 1px);
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: rgba(250, 250, 250, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(228, 228, 231, 0.4);
+}
+
+.dark .glass-panel {
+  background: rgba(8, 8, 10, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(31, 31, 35, 0.4);
+}
+
+/* Premium Link Hover Animation */
 .minimal-link {
   position: relative;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 .minimal-link::after {
@@ -50,7 +100,7 @@ body {
   left: 0;
   background-color: currentColor;
   transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .minimal-link:hover::after {
@@ -58,6 +108,99 @@ body {
   transform-origin: bottom left;
 }
 
+/* Custom Range Input Styling for Equalizer/Sliders */
+input[type="range"].custom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].custom-slider::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--border);
+  border-radius: 1.5px;
+  transition: background 0.2s;
+}
+
+input[type="range"].custom-slider:focus::-webkit-slider-runnable-track,
+input[type="range"].custom-slider:hover::-webkit-slider-runnable-track {
+  background: rgba(var(--accent-rgb), 0.4);
+}
+
+input[type="range"].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -4px; /* Center thumb on track */
+  background-color: var(--foreground);
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+input[type="range"].custom-slider:hover::-webkit-slider-thumb {
+  transform: scale(1.35);
+  background-color: var(--accent);
+}
+
+/* Micro-Equalizer Animations */
+@keyframes bounce-bar-1 {
+  0%, 100% { height: 3px; }
+  50% { height: 13px; }
+}
+
+@keyframes bounce-bar-2 {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+@keyframes bounce-bar-3 {
+  0%, 100% { height: 2px; }
+  50% { height: 10px; }
+}
+
+.animate-eq-1 {
+  animation: bounce-bar-1 0.85s ease-in-out infinite;
+}
+
+.animate-eq-2 {
+  animation: bounce-bar-2 1.15s ease-in-out infinite;
+}
+
+.animate-eq-3 {
+  animation: bounce-bar-3 0.95s ease-in-out infinite;
+}
+
+/* Shimmer Hover Effect */
+.hover-shimmer {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.hover-shimmer:hover {
+  background: linear-gradient(
+    120deg,
+    #3b82f6 20%,
+    #a855f7 40%,
+    #ec4899 60%,
+    #a855f7 80%,
+    #3b82f6 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-flow 3s linear infinite;
+  transform: translateY(-1px);
+}
+
+@keyframes shimmer-flow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Custom Page Transitions & Fade-ins */
 .animate-fade-in {
   opacity: 0;
   animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -111,5 +254,10 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Radial spotlight effect for digital canvas */
+.radial-spotlight {
+  background: radial-gradient(circle 400px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(var(--accent-rgb), 0.05), transparent 80%);
 }
 

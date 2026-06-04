@@ -18,10 +18,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-    // Sync with DOM element class set by the layout blocking script
     const isDark = document.documentElement.classList.contains("dark");
-    setThemeState(isDark ? "dark" : "light");
+
+    const rAF = requestAnimationFrame(() => {
+      setThemeState(isDark ? "dark" : "light");
+      setIsMounted(true);
+    });
+
+    return () => cancelAnimationFrame(rAF);
   }, []);
 
   const setTheme = (nextTheme: Theme) => {

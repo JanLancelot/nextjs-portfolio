@@ -38,7 +38,7 @@ export default function PortfolioPage() {
       </header>
 
       <div className="flex flex-col gap-8 animate-fade-down animation-delay-200">
-        {products.map((product, idx) => (
+        {products.map((product) => (
           <div
             key={product.name}
             className="group flex flex-col gap-2 border-b border-zinc-150 dark:border-zinc-850 pb-6"
