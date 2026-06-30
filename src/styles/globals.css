@@ -3,21 +3,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #fafafa;
-  --foreground: #141416;
-  --accent: #3b82f6;
-  --border: #e4e4e7;
-  --muted: #71717a;
-  --accent-rgb: 59, 130, 246;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --accent: #2563eb;
+  --border: #e2e8f0;
+  --muted: #64748b;
+  --accent-rgb: 37, 99, 235;
 }
 
 .dark {
-  --background: #08080a;
-  --foreground: #f4f4f7;
-  --border: #1f1f23;
-  --muted: #8e8e99;
-  --accent: #60a5fa;
-  --accent-rgb: 96, 165, 250;
+  --background: #09090b;
+  --foreground: #f8fafc;
+  --border: #1e293b;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
+  --accent-rgb: 59, 130, 246;
 }
 
 @theme inline {
@@ -47,41 +47,31 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(120, 120, 120, 0.15);
+  background: rgba(120, 120, 120, 0.1);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(120, 120, 120, 0.3);
+  background: rgba(120, 120, 120, 0.2);
 }
 
-/* Grid & Blueprint Aesthetics */
-.blueprint-grid {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(var(--accent-rgb), 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(var(--accent-rgb), 0.03) 1px, transparent 1px);
-}
-
-.blueprint-grid-subtle {
-  background-size: 8px 8px;
-  background-image: 
-    linear-gradient(to right, rgba(var(--accent-rgb), 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(var(--accent-rgb), 0.015) 1px, transparent 1px);
+/* Subtle Spotlight Gradient */
+.spotlight-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(var(--accent-rgb), 0.05), transparent 70%);
 }
 
 /* Glassmorphism Panel */
 .glass-panel {
-  background: rgba(250, 250, 250, 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(228, 228, 231, 0.4);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.6);
 }
 
 .dark .glass-panel {
-  background: rgba(8, 8, 10, 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(31, 31, 35, 0.4);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 41, 59, 0.6);
 }
 
 /* Premium Link Hover Animation */

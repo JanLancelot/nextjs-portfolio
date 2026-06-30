@@ -64,7 +64,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-background text-foreground transition-colors duration-300 selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black blueprint-grid-subtle">
+      <body className="min-h-screen bg-background text-foreground transition-colors duration-300 selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black relative overflow-x-hidden spotlight-gradient">
         <ThemeProvider>
           {/* Main split-screen container */}
           <div className="min-h-screen w-full flex flex-col lg:flex-row">
