@@ -55,23 +55,23 @@ export default function LiveStatus() {
   };
 
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-2.5 text-[11px] font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 select-none animate-fade-in">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2.5 text-[11px] font-mono tracking-widest uppercase text-slate-400 dark:text-slate-550 select-none animate-fade-in">
       {/* Location / Status */}
       <div className="flex items-center gap-2">
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
-        <span className="font-semibold text-zinc-700 dark:text-zinc-300">
+        <span className="font-semibold text-slate-700 dark:text-slate-350">
           BULACAN, PH
         </span>
-        <span className="text-zinc-300 dark:text-zinc-700">•</span>
-        <span className="text-zinc-500 dark:text-zinc-400 font-medium">{time}</span>
+        <span className="text-slate-200 dark:text-slate-800">•</span>
+        <span className="text-slate-500 dark:text-slate-450 font-medium">{time}</span>
       </div>
 
-      <span className="hidden sm:inline text-zinc-300 dark:text-zinc-700">|</span>
+      <span className="hidden sm:inline text-slate-200 dark:text-slate-800">|</span>
 
-      {/* Spotify Widget / Lofi Player Simulation */}
+      {/* Synth Control Indicator */}
       {isMounted && (
         <button
           onClick={handleTogglePlay}
@@ -89,14 +89,14 @@ export default function LiveStatus() {
               isPlaying ? "animate-eq-3" : "h-[2px]"
             }`} style={isPlaying ? { animationDelay: "0.3s" } : undefined} />
           </div>
-          <span className="text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-700 dark:group-hover:text-zinc-200 transition-colors">
+          <span className="text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors">
             {isPlaying ? (
               <>
-                Playing: <span className="font-semibold text-zinc-750 dark:text-zinc-250">{AUDIO_PRESETS[currentPreset].name}</span>
+                Synth: <span className="font-semibold text-slate-700 dark:text-slate-300">{AUDIO_PRESETS[currentPreset].name}</span>
               </>
             ) : (
-              <span className="italic hover:underline decoration-zinc-400 dark:decoration-zinc-650">
-                Synth: Offline (Tap to Play)
+              <span className="italic hover:underline decoration-slate-300 dark:decoration-slate-700">
+                Synth: Standby (Tap to Play)
               </span>
             )}
           </span>

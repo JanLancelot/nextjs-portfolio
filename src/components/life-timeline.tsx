@@ -50,7 +50,7 @@ export default function LifeTimeline() {
         {/* Year Label */}
         <span
           key={`year-${activeYear}`}
-          className="font-mono text-5xl sm:text-6xl font-extralight tracking-tighter text-zinc-200 dark:text-zinc-800/80 transition-all duration-300 ease-out animate-[slideFadeIn_0.35s_ease-out] select-none"
+          className="font-mono text-5xl sm:text-6xl font-extralight tracking-tighter text-slate-200 dark:text-slate-800/80 transition-all duration-300 ease-out animate-[slideFadeIn_0.35s_ease-out] select-none"
         >
           {activeYear}
         </span>
@@ -58,7 +58,7 @@ export default function LifeTimeline() {
         {/* Description Text */}
         <p
           key={`desc-${activeYear}`}
-          className="text-base text-zinc-700 dark:text-zinc-300 font-normal leading-relaxed transition-all duration-300 ease-out animate-[slideFadeIn_0.35s_ease-out]"
+          className="text-base text-slate-700 dark:text-slate-350 font-normal leading-relaxed transition-all duration-300 ease-out animate-[slideFadeIn_0.35s_ease-out]"
         >
           {activeEvent.description}
         </p>
@@ -68,7 +68,7 @@ export default function LifeTimeline() {
       <div className="relative w-full py-6">
         <div className="relative w-full h-5">
           {/* Base Track Line */}
-          <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-zinc-250 dark:bg-zinc-800/60" />
+          <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-slate-200 dark:bg-slate-800/60" />
 
           {/* Absolute Spaced Ticks*/}
           {TIMELINE_EVENTS.map((evt, idx) => {
@@ -86,8 +86,8 @@ export default function LifeTimeline() {
                 <div
                   className={`w-[1px] transition-all duration-200 ${
                     isActive
-                      ? "h-3.5 bg-zinc-800 dark:bg-zinc-100"
-                      : "h-1.5 bg-zinc-200 dark:bg-zinc-800/80 hover:bg-zinc-400 dark:hover:bg-zinc-650"
+                      ? "h-3.5 bg-slate-800 dark:bg-slate-100"
+                      : "h-1.5 bg-slate-200 dark:bg-slate-800/80 hover:bg-slate-400 dark:hover:bg-slate-600"
                   }`}
                 />
               </div>
@@ -102,10 +102,10 @@ export default function LifeTimeline() {
             }}
           >
             {/* Top Indicator Dot */}
-            <div className="w-1.5 h-1.5 rounded-full bg-zinc-850 dark:bg-zinc-200 absolute bottom-5" />
+            <div className="w-1.5 h-1.5 rounded-full bg-slate-800 dark:bg-slate-200 absolute bottom-5" />
 
             {/* Vertical Line */}
-            <div className="w-[1.5px] h-5.5 bg-zinc-850 dark:bg-zinc-200 absolute bottom-0" />
+            <div className="w-[1.5px] h-5.5 bg-slate-800 dark:bg-slate-200 absolute bottom-0" />
           </div>
         </div>
 
@@ -123,7 +123,7 @@ export default function LifeTimeline() {
       </div>
 
       {/* Muted Instructions */}
-      <span className="text-[10px] font-mono tracking-widest text-zinc-400 dark:text-zinc-500 uppercase text-center block">
+      <span className="text-[10px] font-mono tracking-widest text-slate-400 dark:text-slate-500 uppercase text-center block">
         Scrub the timeline
       </span>
     </div>

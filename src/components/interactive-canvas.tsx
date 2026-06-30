@@ -80,8 +80,8 @@ export default function InteractiveCanvas() {
 
     // 4. Create Material with theme colors
     const isDark = theme === "dark";
-    const materialColor = isDark ? 0x60a5fa : 0x18181b; // Blue-400 in dark, Zinc-900 in light
-    const pointLightColor = isDark ? 0xa855f7 : 0x3b82f6; // Purple in dark, Blue in light
+    const materialColor = isDark ? 0x60a5fa : 0x334155; // Blue-400 in dark, Slate-700 in light
+    const pointLightColor = isDark ? 0x3b82f6 : 0x1e40af; // Blue in dark, Navy Blue in light
     
     pointLight.color.setHex(pointLightColor);
 
@@ -91,7 +91,7 @@ export default function InteractiveCanvas() {
       transparent: true,
       opacity: 0.8,
       shininess: 80,
-      specular: isDark ? 0x93c5fd : 0x27272a,
+      specular: isDark ? 0x3b82f6 : 0x64748b,
     });
 
     // Create starting mesh
@@ -277,18 +277,7 @@ export default function InteractiveCanvas() {
   }, [theme]); // Re-render scene when dark/light theme changes to swap material colors
 
   return (
-    <div className="relative w-full h-[220px] sm:h-[350px] flex items-center justify-center select-none overflow-hidden rounded-xl border border-zinc-150 dark:border-zinc-850/60 bg-linear-to-b from-zinc-50/20 to-zinc-100/10 dark:from-zinc-950/10 dark:to-zinc-900/5 blueprint-grid">
-      {/* Decorative corners */}
-      <div className="absolute top-2 left-2 w-2 h-2 border-t border-l border-zinc-300 dark:border-zinc-700 pointer-events-none" />
-      <div className="absolute top-2 right-2 w-2 h-2 border-t border-r border-zinc-300 dark:border-zinc-700 pointer-events-none" />
-      <div className="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-zinc-300 dark:border-zinc-700 pointer-events-none" />
-      <div className="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-zinc-300 dark:border-zinc-700 pointer-events-none" />
-
-      {/* Grid micro tick */}
-      <div className="absolute top-3 right-3 text-[8px] font-mono tracking-widest text-zinc-400 dark:text-zinc-600 pointer-events-none">
-        0x3D_GEN
-      </div>
-
+    <div className="relative w-full h-[220px] sm:h-[350px] flex items-center justify-center select-none overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/30 dark:bg-slate-900/10">
       <div ref={containerRef} className="w-full h-full cursor-grab active:cursor-grabbing" />
     </div>
   );
