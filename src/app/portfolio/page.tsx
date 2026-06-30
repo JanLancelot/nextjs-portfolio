@@ -16,12 +16,27 @@ interface Product {
 
 const products: Product[] = [
   {
+    name: "Nexus Supply Chain",
+    description: "An enterprise-grade supply chain platform featuring an automated procurement engine that dynamically manages purchase order lifecycles. Consolidated the architecture into a single optimized container deployment, slashing cloud infrastructure costs by 50%, and validated system reliability under a peak load of 284,066 concurrent requests against a 3.1M record database with a 0.00% error rate.",
+    link: "https://github.com/JanLancelot/nexus-supply-chain",
+    category: "Supply Chain / DevOps / Cloud",
+    year: "2026",
+    badge: "Featured",
+  },
+  {
     name: "SchoolAide",
-    description: "An event management application developed for RAKSO, featuring streamlined event creation and coordination.",
+    description: "A campus event management application built for Rakso. Assumed project leadership of an 8-member cross-functional team during a critical transition, managing product backlogs and driving performance tuning that reduced request failure rates from 59.59% to 0.38% under stress testing with 3,000 concurrent users.",
     link: "https://github.com/JanLancelot/school-aide",
     category: "Web App / SaaS",
     year: "2026",
-    badge: "Featured",
+    badge: "Leadership",
+  },
+  {
+    name: "ZOC",
+    description: "A premium full-stack task, habit, and Pomodoro-style focus tracker. Features smart inbox, kanban/calendar views, iCal recurrence tracking, and habit streak analytics. Built using Next.js 16 (App Router), React 19, Prisma, PostgreSQL, Better Auth, and fully containerized via Docker.",
+    link: "https://github.com/JanLancelot/zoc-ticktick-clone",
+    category: "Full Stack / Productivity",
+    year: "2026",
   },
 ];
 

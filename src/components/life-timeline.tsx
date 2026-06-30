@@ -18,7 +18,7 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
   { year: 2023, description: "Entered my first year of College at DYCI as a BS Computer Science student." },
   { year: 2024, description: "Started building full-stack web applications such as school clearance systems" },
   { year: 2025, description: "Lead the development of Nihon-Go, a 3D Japanese language learning game." },
-  { year: 2026, description: "Started my first internship at Rakso as a full-stack developer and project manager." },
+  { year: 2026, description: "Interned at Rakso as a project manager & developer leading cross-functional teams, and optimized the Nexus Supply Chain platform to handle 284k+ concurrent requests." },
 ];
 
 export default function LifeTimeline() {

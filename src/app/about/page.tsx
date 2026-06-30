@@ -20,10 +20,10 @@ export default function AboutPage() {
 
       <article className="flex flex-col gap-6 text-[15px] leading-7 text-zinc-650 dark:text-zinc-400 animate-fade-down animation-delay-200 font-sans">
         <p>
-          I am a developer and designer focused on building <span className="font-semibold text-black dark:text-white">tactile, highly interactive digital experiences</span>. Currently, I am a Computer Science student at DYCI and working as a full-stack developer intern at <span className="font-semibold text-black dark:text-white">Rakso</span>, where I build data-rich web systems and coordinate software projects.
+          I am a software engineer and leader focused on building <span className="font-semibold text-black dark:text-white">scalable, highly reliable digital systems</span>. Currently a Computer Science student at DYCI and a full-stack developer and project manager intern at <span className="font-semibold text-black dark:text-white">Rakso</span>, I take complete ownership of product backlogs and lead cross-functional teams to deliver enterprise-grade systems under tight schedules.
         </p>
         <p>
-          My work sits at the intersection of logical structure and creative composition. I enjoy experimenting with <span className="font-semibold text-black dark:text-white">creative code, WebGL/3D, and procedural synthesis</span> to design interfaces that feel responsive, alive, and tactile. From representing the Philippines at the World Robot Olympiad in Germany to directing the 3D Japanese learning game *Nihon-Go*, I strive for simple, high-performing craft.
+          My technical expertise centers on backend performance tuning, secure CI/CD automation, and designing for extreme reliability, such as validating supply chain architectures under simulated loads of 284k+ concurrent requests and reducing request failure rates by 99% under stress. Whether representing the Philippines at the World Robot Olympiad in Germany or managing end-to-end software lifecycles, I strive to deliver technical mastery and clear, measurable business value.
         </p>
       </article>
 
