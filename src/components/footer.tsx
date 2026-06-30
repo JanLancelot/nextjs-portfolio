@@ -9,7 +9,6 @@ export default function Footer() {
 
   const links = [
     { name: "About", href: "/about" },
-    { name: "Words", href: "/words" },
     { name: "Portfolio", href: "/portfolio" },
   ];
 

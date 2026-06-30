@@ -14,15 +14,7 @@ export interface Post {
   readTime: string;
 }
 
-export const posts: Post[] = [
-  {
-    title: "Agentic Coding",
-    excerpt: "Reflections on how AI agents changed the way we write and design software.",
-    date: "May 25, 2026",
-    slug: "agentic-coding",
-    readTime: "4 min read",
-  },
-];
+export const posts: Post[] = [];
 
 export default function WordsPage() {
   return (
